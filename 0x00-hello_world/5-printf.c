@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-/* This is a c file that prints out a sentence*/
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {
