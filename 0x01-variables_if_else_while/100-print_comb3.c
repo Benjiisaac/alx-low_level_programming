@@ -15,8 +15,10 @@ int main(void)
 	{
 		for (j = 0; j <= 9; j++)
 		{
-			if (i != j && 'ij' <= '89')
+			if (i != j)
 			{
+				if (i == 8 && j == 9)
+					continue;
 				printf("%d", i);
 				putchar(j + '0');
 				putchar(',');
