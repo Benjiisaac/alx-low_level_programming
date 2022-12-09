@@ -22,7 +22,7 @@ int main(void)
 				printf(" ");
 				putchar(j / 10 + '0');
 				putchar(j % 10 + '0');
-				prints(", ");
+				printf(", ");
 			}
 			else
 			{
