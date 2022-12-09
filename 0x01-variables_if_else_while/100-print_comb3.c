@@ -18,7 +18,6 @@ int main(void)
 			if (i != j)
 			{
 				printf("%d", i);
-				putchar(',');
 				putchar(j + '0');
 				putchar(',');
 				putchar(' ');
