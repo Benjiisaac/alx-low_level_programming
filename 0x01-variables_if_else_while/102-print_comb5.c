@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+/**
+ * main - Prints all possible combinations of three different digits,
+ *        in ascending order, separated by a comma followed by a space.
+ *
+ * Return: Always 0.
+ */
+
+int main(void)
+{
+	for (int i = 0; i <= 99; i++)
+	{
+		for (int j = i; j <= 99; j++)
+		{
+			putchar(i / 10 + '0');
+			putchar(i % 10 + '0');
+			putchar(' ');
+			putchar(j / 10 + '0');
+			putchar(j % 10 + '0');
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	return (0);
+}
