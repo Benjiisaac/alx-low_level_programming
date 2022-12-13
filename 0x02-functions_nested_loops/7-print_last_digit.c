@@ -2,9 +2,9 @@
 
 /**
  * print_last_digit - prints the last digit of a number
- * @n: the number to print the last digit of
+ * @r: the number to print the last digit of
  *
- * Return: the last digit of n
+ * Return:ld, the last digit of n
  */
 
 int print_last_digit(int r)
