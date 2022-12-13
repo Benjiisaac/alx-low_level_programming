@@ -2,9 +2,9 @@
 
 /**
  * print_sign - check if a character is alphabetical
- * @c: the character to check
+ * @n: the character to check
  *
- * Return: 1 
+ * Return: 1 if greater than 0, 0 if equals to zero and -1 if negative
  */
 
 int print_sign(int n)
