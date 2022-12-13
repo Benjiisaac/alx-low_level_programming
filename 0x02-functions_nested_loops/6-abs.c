@@ -8,5 +8,5 @@ int _abs(int n)
 		_putchar(-n);
 	}
 	else
-		_putcher(n);
+		_putchar(n);
 }
