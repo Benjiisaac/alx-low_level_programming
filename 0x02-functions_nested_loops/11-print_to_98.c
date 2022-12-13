@@ -9,13 +9,20 @@
 
 void print_to_98(int n)
 {
-	if (n <= 98)
+	while (n <= 98)
 	{
 		_putchar(n + '0');
 		_putchar(',');
 		_putchar(' ');
 		n++;
 	}
-	else
-		printf("this is a dud");
+	else while (n >= 98)
+	{
+		_putchar(n + '0');
+		_putchar(',');
+		_putchar(' ');
+		n--;
+	}
+	if (n == 98)
+		putchar(n + '0');
 }
