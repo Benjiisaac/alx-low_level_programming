@@ -16,5 +16,5 @@ void print_to_98(int n)
 		n++;
 	}
 	else
-		return(0);
+		printf("this is a dud");
 }
