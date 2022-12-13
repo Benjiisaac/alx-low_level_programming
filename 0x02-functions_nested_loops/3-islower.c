@@ -3,7 +3,7 @@
 /**
  * int _lower - a function that returns 1 if lowercase 0 otherwise
  *
- * Return: 
+ * Return: 1 if lower, 0 otherwise
  */
 
 int _islower(int c)
