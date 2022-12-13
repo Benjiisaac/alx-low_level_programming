@@ -9,4 +9,5 @@ int _abs(int n)
 	}
 	else
 		_putchar(n);
+	return(0);
 }
