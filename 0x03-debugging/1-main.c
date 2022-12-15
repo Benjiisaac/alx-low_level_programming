@@ -13,15 +13,13 @@ int main(void)
 
 	i = 0;
 
-
 /**
  * removed infinite loop - while (i < 10)
  * {
  * putchar(i);
  * }
- * @param: o - the string to print
+ * @o - the string to print
  */
-
 	printf("Infinite loop avoided! \\o/\n");
 
 	return (0);
