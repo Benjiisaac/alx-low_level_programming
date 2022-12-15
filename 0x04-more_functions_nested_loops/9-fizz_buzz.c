@@ -17,5 +17,5 @@ int main(void)
 			printf("%d ", n);
 		n++;
 	}
-	return(0);
+	return (0);
 }
