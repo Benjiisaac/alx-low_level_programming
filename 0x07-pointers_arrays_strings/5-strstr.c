@@ -9,6 +9,11 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
+	if (haystack == NULL || needle == NULL)
+	{
+		return NULL;
+	}
+
 	int i;
 	int j;
 
