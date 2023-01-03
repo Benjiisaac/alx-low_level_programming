@@ -6,6 +6,7 @@
  * @c: the character to search for
  * Return: pointer to s[i] or NULL
  */
+
 char *_strchr(char *s, char c)
 {
 	int i;
@@ -16,6 +17,8 @@ char *_strchr(char *s, char c)
 		{
 			return (s + i);
 		}
+		if (c == '\0')
+		return (s);
 	}
 	return (NULL);
 }
