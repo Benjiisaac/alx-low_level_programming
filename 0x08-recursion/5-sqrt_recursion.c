@@ -8,21 +8,17 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _sqrt_recursion(int n) {
-  return sqrt_recursion_helper(n, 1, n);
-}
-
-int sqrt_recursion_helper(int n, int min, int max) {
-  if (max < min) {
-    return -1;
+int _sqrt_recursion(int n)
+{
+  if (n == 0 || n == 1)
+  {
+    return n;
   }
-  int guess = (min + max) / 2;
-  if (guess * guess == n) {
-    return guess;
-  } else if (guess * guess < n) {
-    return sqrt_recursion_helper(n, guess + 1, max);
-  } else {
-    return sqrt_recursion_helper(n, min, guess - 1);
-  }
-}
+  int root = _sqrt_recursion(n - 1);
 
+  if (root * root == n)
+  {
+    return root;
+  }
+  return -1;
+}
