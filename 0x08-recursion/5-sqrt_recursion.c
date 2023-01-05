@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * sqrt2 - Makes possible to evaluate from 1 to n
  * @a: same number as n
@@ -7,37 +6,22 @@
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
+ * sqrt_recursion - returns the natural square root of n
+ * @n: Number Integer
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-int _sqrt_recursion(int n)
+int sqrt2(int a, int b)
 {
-	int low;
-	int high;
-	int mid;
-	int mid_squared;
-  if (n < 0)
-  {
-    return -1;
-  }
-  low = 0;
-  high = n;
-  
-  while (low <= high)
-  {
-    mid = (low + high) / 2;
-    mid_squared = mid * mid;
-    if (mid_squared == n)
-    {
-    return mid;
-    }
-    else if (mid_squared < n)
-    {
-    low = mid + 1;
-    }
-    else
-    {
-    high = mid - 1;
-    }
-  }
-  return -1;
+	if (b * b == a)
+		return (b);
+	else if (b * b > a)
+		return (-1);
+	return (sqrt2(a, b + 1));
 }
 
+int _sqrt_recursion(int n)
+{
+	return (sqrt2(n, 1));
+}
