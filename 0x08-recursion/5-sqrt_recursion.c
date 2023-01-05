@@ -10,17 +10,30 @@
  */
 int _sqrt_recursion(int n)
 {
-	int root;
-
-  if (n == 0 || n == 1)
+  if (n < 0)
   {
-    return n;
+    return -1;
   }
-  root = _sqrt_recursion(n - 1);
-
-  if (root * root == n)
+  int low = 0;
+  int high = n;
+  
+  while (low <= high)
   {
-    return root;
+    int mid = (low + high) / 2;
+    int mid_squared = mid * mid;
+    if (mid_squared == n)
+    {
+    return mid;
+    }
+    else if (mid_squared < n)
+    {
+    low = mid + 1;
+    }
+    else
+    {
+    high = mid - 1;
+    }
   }
   return -1;
 }
+
