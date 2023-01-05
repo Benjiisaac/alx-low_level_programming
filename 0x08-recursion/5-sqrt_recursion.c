@@ -14,20 +14,14 @@ int _sqrt_recursion(int n) {
 
 int sqrt_recursion_helper(int n, int min, int max) {
   if (max < min) {
-    // No natural square root
     return -1;
   }
-
-  // Check the middle value
   int guess = (min + max) / 2;
   if (guess * guess == n) {
-    // Square root found
     return guess;
   } else if (guess * guess < n) {
-    // Search the upper half of the range
     return sqrt_recursion_helper(n, guess + 1, max);
   } else {
-    // Search the lower half of the range
     return sqrt_recursion_helper(n, min, guess - 1);
   }
 }
