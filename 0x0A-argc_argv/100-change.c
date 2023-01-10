@@ -12,9 +12,14 @@
  */
 int _isnumber(char *s)
 {
-	int i, check, d;
+	int i;
+	int check;
+	int d;
 
-	i = 0, d = 0, check = 1;
+	i = 0;
+	d = 0;
+	check = 1;
+
 	if (*s == '-')
 		i++;
 	for (; *(s + i) != 0; i++)
@@ -37,10 +42,16 @@ int _isnumber(char *s)
  */
 int main(int argc, char **argv)
 {
-	int j, ex, coins, cents, d;
+	int j;
+	int ex;
+	int coins;
+	int cents;
+	int d;
 	int c[5] = {25, 10, 5, 2, 1};
 
-	ex = 1, j = 0, coins = 0;
+	ex = 1;
+	j = 0;
+	coins = 0;
 	if (argc == 2)
 	{
 		if (_isnumber(argv[1]))
