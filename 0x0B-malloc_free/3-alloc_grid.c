@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - creates a 2D array of integers and initializes each element to 0
+ * alloc_grid - creates a 2D array of integers and initializes each element 0
  * @width: width of the grid
  * @height: height of the grid
  *
@@ -45,4 +45,4 @@ int **alloc_grid(int width, int height)
 		}
 	}
 	return (grid);
-}	
+}
