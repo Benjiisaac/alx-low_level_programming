@@ -2,6 +2,7 @@
 #define DOG
 
 /**
+ * struct dog - Defines a new type struct dog
  * struct - structure of type dog
  * @name: pointer to name of dog
  *
