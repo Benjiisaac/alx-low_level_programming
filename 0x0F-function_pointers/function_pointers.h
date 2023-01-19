@@ -23,4 +23,5 @@ char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 void print_name(char *name, void (*f)(char *));
 void array_iterator(int *array, size_t size, void (*action)(int));
+int int_index(int *array, int size, int (*cmp)(int));
 #endif
