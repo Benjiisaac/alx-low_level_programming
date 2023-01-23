@@ -1,5 +1,5 @@
 #include "variadic_functions.h"
-
+#include <stdio.h>
 /**
  * print_numbers - function that prints numbers, followed by a new line
  * @separator: string to be printed between numbers
