@@ -1,3 +1,4 @@
+#include "main.h"
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -14,30 +15,37 @@
  * If filename is NULL return 0
  * If write fails or does not write the expected amount of bytes, return 0
  */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	ssize_t nread;
-	char *buf;
+	int fd, checkr, checkw;
+	char *c;
 
-	if (filename == NULL)
+	if (filename == 0)
 		return (0);
 
-	fd = open(filename, O_RDONLY);
+	c = malloc(letters + 1);
+
+	if (c == 0)
+		return (0);
+
+	fd  = open(filename, O_RDONLY);
+
 	if (fd == -1)
-		return (0);
+		return (free(c), 0);
 
-	buf = malloc(sizeof(char) * letters);
-	if (buf == NULL)
-		return (0);
+	checkr = read(fd, c, letters);
 
-	nread = read(fd, buf, letters);
-	if (nread == -1)
-	{
-		free(buf);
-		return (0);
-	}
-	free(buf);
+	if (checkr == -1)
+		return (free(c), 0);
+
+	c[letters] = '\0';
+
+	checkw = write(STDOUT_FILENO, c, checkr);
+	if (checkw == -1)
+		return (free(c), 0);
+
+	free(c);
 	close(fd);
-	return (nread);
+	return (checkw);
 }
